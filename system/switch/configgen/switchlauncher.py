@@ -31,7 +31,11 @@ from configgen.batoceraPaths import SAVES
 from Emulator import Emulator
 from configgen.utils import bezels as bezelsUtil
 from configgen.utils import videoMode
-from configgen.utils import gunsUtils
+try:
+    from configgen.utils import gunsUtils
+except ImportError:
+    gunsUtils = None
+
 from configgen.utils import wheelsUtils
 from configgen.utils.logger import setup_logging
 from configgen.utils.hotkeygen import set_hotkeygen_context
